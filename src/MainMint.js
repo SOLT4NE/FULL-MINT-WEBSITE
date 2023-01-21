@@ -44,23 +44,26 @@ import { ethers, BigNumber } from 'ethers';
              };
 
              return(
-                <div>
+                <div className="mainm">
+                    <div className="box">
+                        <div className="text">
                     <h1>CryptoRObo</h1>
-                    <p>This is a mint on the testnet of eth</p>
+                    <p>This is a mint on the eth testnet</p></div>
                     {isConnected ? (
                         
                         <div>
-                            <div>
+                            <div className="but">
                              <button onClick={handleDecrement} >-</button>  
-                             <input type={Number} value={mintAmount} />
+                             <input readOnly type={Number} value={mintAmount} />
                              <button onClick={handleIncrement} >+</button>  
 
                 </div>
-                <button onClick={handleMint}>Mint Now</button>
+                <button onClick={handleMint} className="mint">Mint Now</button>
                 </div>
                     ) : (
-                        <p>you must be connected to mint</p>
+                        <p className="notcon">you must be connected to mint</p>
                     )}
+                    </div>
                 </div>
              )
     

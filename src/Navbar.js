@@ -1,6 +1,4 @@
 import React from "react";
-import { Box, Button, Flex, Image, Link, Spacer } from '@chakra-ui/react';
-import { ChakraProvider } from '@chakra-ui/react'
 import Facebook from './assets/social-media-icons/facebook_32x32.png';
 import Twitter from './assets/social-media-icons/twitter_32x32.png';
 import Email from './assets/social-media-icons/email_32x32.png';
@@ -17,26 +15,25 @@ async function connectAccount () {
         setAccounts(accounts);
     }
 }
- <ChakraProvider>
+ 
 return(
 
-   <flex justify="space-between" align="center" padding= "30px">
+ 
+   <div className="navbar">
    
-   <Flex justify= "space-around" width="40%" padding="0 75px">
-       <Link href= "https://www. facebook. com">
-     <Image src={Facebook} boxSize= "42px" margin="0 15px" />
-   </Link>
-   <Link href= "https://www. twitter. com">
-     <Image src={Twitter} boxSize= "42px" margin="0 15px" />
-   </Link>
-   <Link href= "https://www.gmail.com">
-     <Image src={Email} boxSize= "42px" margin="0 15px" />
-   </Link> </Flex>
-       
-  
-
+   <div className="icon">
+       <a href= "https://www. facebook. com">
+     <img src={Facebook} className="fb" alt=""/>
+   </a>
+   <a href= "https://www. twitter. com">
+     <img src={Twitter} className="tw"  alt=""/>
+   </a>
+   <a href= "https://www.gmail.com">
+     <img src={Email} className="em" alt=""/>
+   </a>
+    </div>
     {/*/ right side connecte and icons/*/}
-
+<div className="nav">
     <div>about</div>
         <div>mint</div>
         <div>team</div>
@@ -49,12 +46,12 @@ return(
     <button onClick={connectAccount}>Connect</button>
 )}
 
+</div>
 
-
-  </flex>   
+  </div>   
 );
 
- </ChakraProvider>
+
 };
 
 export default Navbar;
